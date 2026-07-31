@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmet Barış Baç — Portfolio</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d2991d;
+    --red: #f85149;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .hero h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.5px; }
+  .hero .subtitle { color: var(--muted); font-size: 1.1rem; margin-top: 0.5rem; }
+  .hero .badges { margin-top: 1.2rem; display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .badge-lang { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .badge-loc { background: rgba(63,185,80,0.15); color: var(--green); }
+  .badge-status { background: rgba(210,153,29,0.15); color: var(--orange); }
+
+  /* Sections */
+  section { margin-bottom: 2.5rem; }
+  section h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* About */
+  .about p { color: var(--muted); max-width: 650px; }
+
+  /* Tech grid */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .tech-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .tech-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .tech-card p { color: var(--muted); font-size: 0.9rem; }
+
+  /* Projects */
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+  }
+  .project-card:hover { border-color: var(--accent); }
+  .project-card h3 { font-size: 1.1rem; font-weight: 600; }
+  .project-card h3 .icon { margin-right: 0.4rem; }
+  .project-card .desc { color: var(--muted); font-size: 0.9rem; margin: 0.4rem 0 0.6rem; }
+  .project-card .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    background: rgba(88,166,255,0.1);
+    color: var(--accent);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+
+  /* Contact */
+  .contact-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+  }
+  .contact-links a:hover { border-color: var(--accent); text-decoration: none; }
+
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Ahmet Barış Baç</h1>
+    <p class="subtitle">Electrical Engineering &amp; Information Technology — KIT Karlsruhe</p>
+    <div class="badges">
+      <span class="badge badge-lang">C++ / Python</span>
+      <span class="badge badge-loc">Karlsruhe, DE</span>
+      <span class="badge badge-status">Open to Werkstudent/HiWi</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section>
+    <h2>About</h2>
+    <div class="about">
+      <p>
+        B.Sc. student in ETIT at KIT, building a career at the intersection of <strong>software engineering, data analysis, and AI</strong>.
+        Currently seeking Werkstudent or HiWi positions (12–16 h/week) in Karlsruhe — software development, IT support, data pipelines, or research assistance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section>
+    <h2>Tech Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h3>Languages</h3>
+        <p>C++17/20, Python, SQL (learning)</p>
+      </div>
+      <div class="tech-card">
+        <h3>Build &amp; Test</h3>
+        <p>CMake, Ninja, Catch2, Google Test, GitLab CI</p>
+      </div>
+      <div class="tech-card">
+        <h3>Concepts</h3>
+        <p>OOP, Polymorphism, Algorithms, Debugging, Automated Testing</p>
+      </div>
+      <div class="tech-card">
+        <h3>Tools</h3>
+        <p>Git, GitHub, CLion, VS Code, CI/CD</p>
+      </div>
+      <div class="tech-card">
+        <h3>Data</h3>
+        <p>CSV processing, Sensor analysis, Anomaly detection</p>
+      </div>
+      <div class="tech-card">
+        <h3>Languages (human)</h3>
+        <p>Turkish (native) · German (DSD II) · English (B2)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Featured Projects</h2>
+
+    <a href="https://github.com/barisbac20-blip/wordlomat" target="_blank" style="text-decoration:none;color:inherit;">
+      <div class="project-card">
+        <h3><span class="icon">🟢</span> Wordlomat — C++ Wordle Engine</h3>
+        <p class="desc">Full-featured Wordle implementation with entropy-based AI solver, three difficulty levels, CSV persistence, and comprehensive Catch2 test suite.</p>
+        <div class="tags">
+          <span class="tag">C++17</span><span class="tag">OOP</span><span class="tag">CMake</span><span class="tag">Catch2</span><span class="tag">Algorithms</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://github.com/barisbac20-blip/dna-matching" target="_blank" style="text-decoration:none;color:inherit;">
+      <div class="project-card">
+        <h3><span class="icon">🧬</span> DNA Matching — Gene Sequence Algorithm</h3>
+        <p class="desc">Efficient gene-sequence matcher with configurable mismatch tolerance and early-termination optimization.</p>
+        <div class="tags">
+          <span class="tag">C++20</span><span class="tag">Algorithms</span><span class="tag">String Matching</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://github.com/barisbac20-blip/shapes-polymorphism" target="_blank" style="text-decoration:none;color:inherit;">
+      <div class="project-card">
+        <h3><span class="icon">🔷</span> Shapes — Polymorphic Geometry Engine</h3>
+        <p class="desc">Clean polymorphic shape hierarchy (Circle/Rectangle/Triangle) with ShapeRegistry factory pattern — classical OOP design.</p>
+        <div class="tags">
+          <span class="tag">C++20</span><span class="tag">OOP</span><span class="tag">Polymorphism</span><span class="tag">Design Patterns</span>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Currently -->
+  <section>
+    <h2>Currently</h2>
+    <div class="about">
+      <p>
+        📚 Exam season: HM2/3, ITAT, Elektronische Systeme<br>
+        🔍 Open to Werkstudent/HiWi roles starting Sep/Oct 2026<br>
+        🛠 Building: automation tooling, open-source contributions<br>
+        🤝 Ehrenamtlich: IT-Ressort @ Engineers Without Borders Karlsruhe
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:barisbac20@gmail.com">✉️ barisbac20@gmail.com</a>
+      <a href="https://github.com/barisbac20-blip" target="_blank">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/barisbac" target="_blank">💼 LinkedIn</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Ahmet Barış Baç — Karlsruhe, Germany
+</footer>
+
+</body>
+</html>
