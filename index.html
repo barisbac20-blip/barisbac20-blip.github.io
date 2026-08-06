@@ -1,282 +1,732 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahmet Baru0131u015F Baç — Portfolio</title>
-<style>
-  :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --border: #30363d;
-    --text: #c9d1d9;
-    --muted: #8b949e;
-    --accent: #58a6ff;
-    --green: #3fb950;
-    --orange: #d2991d;
-    --red: #f85149;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-
-  /* Hero */
-  .hero {
-    text-align: center;
-    padding: 3rem 0 2rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 2rem;
-  }
-  .hero h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.5px; }
-  .hero .subtitle { color: var(--muted); font-size: 1.1rem; margin-top: 0.5rem; }
-  .hero .badges { margin-top: 1.2rem; display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
-  .badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-  .badge-lang { background: rgba(88,166,255,0.15); color: var(--accent); }
-  .badge-loc { background: rgba(63,185,80,0.15); color: var(--green); }
-  .badge-status { background: rgba(210,153,29,0.15); color: var(--orange); }
-
-  /* Sections */
-  section { margin-bottom: 2.5rem; }
-  section h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* About */
-  .about p { color: var(--muted); max-width: 650px; }
-
-  /* Tech grid */
-  .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-  .tech-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  .tech-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .tech-card p { color: var(--muted); font-size: 0.9rem; }
-
-  /* Projects */
-  .project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.2rem;
-    margin-bottom: 1rem;
-    transition: border-color 0.2s;
-  }
-  .project-card:hover { border-color: var(--accent); }
-  .project-card h3 { font-size: 1.1rem; font-weight: 600; }
-  .project-card h3 .icon { margin-right: 0.4rem; }
-  .project-card .desc { color: var(--muted); font-size: 0.9rem; margin: 0.4rem 0 0.6rem; }
-  .project-card .tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-  .tag {
-    font-size: 0.75rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: 12px;
-    background: rgba(88,166,255,0.1);
-    color: var(--accent);
-    font-family: 'SF Mono', 'Fira Code', monospace;
-  }
-
-  /* Contact */
-  .contact-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-  .contact-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 0.9rem;
-    transition: border-color 0.2s;
-  }
-  .contact-links a:hover { border-color: var(--accent); text-decoration: none; }
-
-  footer {
-    text-align: center;
-    padding: 2rem 0;
-    color: var(--muted);
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border);
-    margin-top: 3rem;
-  }
-</style>
+<title>Ahmet Barış Baç</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ahmet Barış Baç — Electrical Engineering &amp; Information Technology at KIT, Karlsruhe. C++, Python, automated testing. Work you can verify.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ahmet Barış Baç","jobTitle":"B.Sc. Student, Electrical Engineering and Information Technology","affiliation":{"@type":"CollegeOrUniversity","name":"Karlsruhe Institute of Technology"},"email":"mailto:barisbac20@gmail.com","url":"https://barisbac20-blip.github.io","sameAs":["https://github.com/barisbac20-blip"],"address":{"@type":"PostalAddress","addressLocality":"Karlsruhe","addressCountry":"DE"},"knowsLanguage":["tr","de","en"]}
+</script>
 </head>
 <body>
 
-<div class="container">
+<style>
+  /* ————— a single committed world: dark theater, bone card stock ————— */
+  :root {
+    --void: #0A0A0C;
+    --void-lift: #111113;
+    --smoke: #17171A;
+    --hairline: #232327;
+    --bone: #F1ECE1;
+    --bone-dim: #B9B2A2;
+    --bone-faint: #8A8376;
+    --engrave: #3B372F;
+    --oxblood: #7E2D25;
+    --oxblood-bright: #A03A2F;
+    --oxblood-text: #C96A55;
+    --gilt: #C6A55F;
+    --gilt-dim: #A18A55;
+    --serif-display: "Didot", "Bodoni 72", "Playfair Display", "Times New Roman", serif;
+    --serif-card: "Copperplate", "Copperplate Gothic Light", "Trajan Pro", "Cinzel", serif;
+    --sans: "Optima", "Candara", "Avenir Next", "Segoe UI", -apple-system, sans-serif;
+  }
 
-  <!-- Hero -->
-  <div class="hero">
-    <h1>Ahmet Baru0131u015F Baç</h1>
-    <p class="subtitle">Electrical Engineering &amp; Information Technology — KIT Karlsruhe</p>
-    <div class="badges">
-      <span class="badge badge-lang">C++ / Python</span>
-      <span class="badge badge-loc">Karlsruhe, DE</span>
-      <span class="badge badge-status">Open to Werkstudent/HiWi</span>
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--bone-dim);
+    font: 16.5px/1.75 var(--sans);
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--oxblood); color: var(--bone); }
+
+  a { color: var(--bone); }
+  a:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--bone); outline-offset: 4px;
+  }
+
+  /* film grain over everything */
+  .grain {
+    position: fixed; inset: -60px; z-index: 50; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .grain { animation: grain 0.9s steps(3) infinite; }
+    @keyframes grain {
+      0% { transform: translate(0, 0); }
+      33% { transform: translate(-18px, 24px); }
+      66% { transform: translate(22px, -14px); }
+      100% { transform: translate(0, 0); }
+    }
+  }
+
+  /* ————————————— ACT I · the card ————————————— */
+  .act-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 40px; padding: 48px 24px 40px;
+    position: relative;
+    background: radial-gradient(ellipse 90% 70% at 50% 42%, #131315 0%, var(--void) 68%);
+  }
+
+  .hero-over {
+    font-family: var(--serif-card);
+    font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--bone-faint); text-align: center; margin: 0;
+    text-indent: 0.42em; /* balance the trailing tracking */
+  }
+
+  .monogram {
+    width: 74px; height: 74px; color: var(--gilt);
+    display: block;
+  }
+
+  .card-stage {
+    perspective: 1400px;
+    width: min(560px, 92vw);
+  }
+  .card {
+    position: relative;
+    width: 100%; aspect-ratio: 7 / 4;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    will-change: transform;
+  }
+  .js .card { animation: cardIn 1.5s cubic-bezier(0.16, 0.65, 0.2, 1) 0.25s both; }
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(56px) rotateX(24deg) scale(0.94); }
+    to   { opacity: 1; transform: translateY(0) rotateX(0) scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js .card { animation: none; }
+    .card-inner { transition: none; }
+  }
+
+  .card-inner {
+    position: absolute; inset: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.9s cubic-bezier(0.3, 0.8, 0.25, 1);
+  }
+  .card.flipped .card-inner { transform: rotateY(180deg); }
+
+  .face {
+    position: absolute; inset: 0;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.53 0 0 0 0 0.47 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E"),
+      linear-gradient(148deg, #F4EFE5 0%, #EFE9DC 55%, #E9E2D2 100%);
+    border-radius: 3px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.35) inset,
+      0 -1px 0 rgba(59,55,47,0.18) inset,
+      0 2px 3px rgba(0,0,0,0.5),
+      0 14px 34px rgba(0,0,0,0.55),
+      0 40px 90px rgba(0,0,0,0.5);
+    color: var(--engrave);
+    display: flex; flex-direction: column;
+    padding: 6.2% 7%;
+    font-family: var(--serif-card);
+    text-transform: uppercase;
+  }
+  .face.back { transform: rotateY(180deg); }
+
+  /* gilded hairline frame, inset like an engraved card border */
+  .face::before {
+    content: ""; position: absolute; inset: 4.5%;
+    border: 1px solid rgba(166, 138, 82, 0.5);
+    border-radius: 2px; pointer-events: none;
+  }
+
+  /* moving sheen, driven by --mx/--my from JS */
+  .face::after {
+    content: ""; position: absolute; inset: 0; border-radius: 3px;
+    background: radial-gradient(ellipse 60% 48% at calc(var(--mx, 50%)) calc(var(--my, 30%)),
+                rgba(255,255,255,0.30), rgba(255,255,255,0) 62%);
+    mix-blend-mode: soft-light; pointer-events: none;
+  }
+
+  .card-row {
+    display: flex; justify-content: space-between;
+    font-size: clamp(6.5px, 1.55vw, 10px); letter-spacing: 0.28em;
+    color: #57523F;
+  }
+  .card-center { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.2%; }
+  .card-name {
+    margin: 0; font-weight: 400;
+    font-size: clamp(15px, 3.9vw, 26px);
+    letter-spacing: 0.24em; text-indent: 0.24em;
+    color: var(--engrave); white-space: nowrap;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.55);
+  }
+  .card-title {
+    font-size: clamp(6.5px, 1.6vw, 10.5px);
+    letter-spacing: 0.34em; text-indent: 0.34em; text-align: center;
+    color: #5F594A;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .card-foot {
+    text-align: center; font-size: clamp(6.5px, 1.55vw, 10px);
+    letter-spacing: 0.26em; text-indent: 0.26em; color: #57523F;
+  }
+
+  .back .card-center { gap: 9%; }
+  .back-line {
+    font-size: clamp(7px, 1.7vw, 11px); letter-spacing: 0.3em; text-indent: 0.3em;
+    color: var(--engrave); text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    text-align: center;
+  }
+  .back-line small { display: block; font-size: 0.72em; color: #5F594A; letter-spacing: 0.34em; margin-bottom: 4px; }
+
+  .hero-hint {
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; text-indent: 0.3em;
+    color: var(--bone-faint); margin: 0; font-family: var(--serif-card);
+  }
+
+  .scrollcue {
+    position: absolute; bottom: 26px; left: 50%;
+    width: 1px; height: 56px; overflow: hidden;
+    background: var(--hairline);
+  }
+  .scrollcue::after {
+    content: ""; position: absolute; left: 0; top: -50%;
+    width: 1px; height: 50%; background: var(--bone-dim);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .scrollcue::after { animation: cue 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+    @keyframes cue { 0% { top: -50%; } 60% { top: 100%; } 100% { top: 100%; } }
+  }
+
+  /* ————————————— shared section chrome ————————————— */
+  .stage { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+  section { padding: 130px 0 20px; position: relative; }
+
+  .numeral {
+    font-family: var(--serif-display);
+    font-size: clamp(120px, 22vw, 240px); line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(198, 165, 95, 0.22);
+    position: absolute; top: 44px; right: -10px;
+    user-select: none; pointer-events: none;
+  }
+
+  /* ————— affiliations strip: engraved wordmarks, no borrowed logos ————— */
+  .affil {
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 26px 24px;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 14px 22px;
+  }
+  .affil span {
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 10.5px; letter-spacing: 0.28em; text-indent: 0.28em;
+    color: var(--gilt-dim); white-space: nowrap;
+  }
+  .affil .sep {
+    color: var(--gilt); font-size: 7px; letter-spacing: 0; text-indent: 0;
+  }
+
+  .sec-label {
+    font-family: var(--serif-card);
+    font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--oxblood-text); margin: 0 0 14px;
+  }
+  .sec-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: clamp(38px, 6.4vw, 68px); line-height: 1.06;
+    letter-spacing: 0.005em;
+    color: var(--bone); margin: 0 0 42px; text-wrap: balance;
+  }
+  .rule { height: 1px; background: var(--hairline); transform-origin: left; }
+  .js .rule.reveal { transform: scaleX(0); }
+  .js .rule.reveal.in { transform: scaleX(1); transition: transform 1.1s cubic-bezier(0.2, 0.6, 0.2, 1) 0.15s; }
+
+  /* reveal choreography */
+  .js .reveal { opacity: 0; transform: translateY(26px); }
+  .js .reveal.in {
+    opacity: 1; transform: none;
+    transition: opacity 0.9s cubic-bezier(0.2, 0.6, 0.2, 1) var(--d, 0s),
+                transform 0.9s cubic-bezier(0.2, 0.6, 0.2, 1) var(--d, 0s);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal, .js .rule.reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ————————————— ACT II · profile ————————————— */
+  .prose { max-width: 62ch; }
+  .prose p { margin: 0 0 1.35em; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--bone); font-weight: 600; }
+
+  .pull {
+    font-family: var(--serif-display); font-style: italic; font-weight: 400;
+    font-size: clamp(26px, 4.4vw, 44px); line-height: 1.25;
+    color: var(--bone); max-width: 22em;
+    margin: 96px 0 0; text-wrap: balance;
+  }
+  .pull em { font-style: italic; color: var(--oxblood-text); }
+
+  /* ————————————— ACT III · work ————————————— */
+  .work-list { border-top: 1px solid var(--hairline); }
+  .work {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 8px 34px;
+    padding: 44px 12px 46px;
+    border-bottom: 1px solid var(--hairline);
+    position: relative;
+    transition: background 0.4s ease;
+  }
+  .work:hover { background: var(--void-lift); }
+  .work::before {
+    content: ""; position: absolute; left: 0; top: 0;
+    width: 1px; height: 100%; background: var(--oxblood);
+    transform: scaleY(0); transform-origin: top;
+    transition: transform 0.45s cubic-bezier(0.3, 0.7, 0.2, 1);
+  }
+  .work:hover::before { transform: scaleY(1); }
+
+  .work-no {
+    font-family: var(--serif-display);
+    font-size: 30px; color: var(--bone-faint); line-height: 1.3;
+  }
+  .work h3 {
+    font-family: var(--serif-display); font-weight: 400;
+    font-size: clamp(26px, 3.6vw, 38px); line-height: 1.12;
+    color: var(--bone); margin: 0 0 4px;
+    transition: transform 0.45s cubic-bezier(0.3, 0.7, 0.2, 1);
+  }
+  .work:hover h3 { transform: translateX(10px); }
+  .work .status {
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 10px; letter-spacing: 0.3em; color: var(--bone-faint);
+    margin: 0 0 16px;
+  }
+  .work p.desc { margin: 0 0 18px; max-width: 64ch; }
+  .work .tech {
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 10.5px; letter-spacing: 0.24em; color: var(--bone-dim);
+    margin: 0 0 12px;
+  }
+  .work .proof {
+    display: inline-block;
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 10.5px; letter-spacing: 0.2em;
+    color: var(--bone);
+    border-left: 2px solid var(--oxblood);
+    padding: 4px 0 4px 14px;
+  }
+  .work .repo { margin-top: 14px; font-size: 13.5px; }
+  .work .repo a { color: var(--bone-dim); text-decoration: none; border-bottom: 1px solid var(--hairline); transition: color 0.3s, border-color 0.3s; }
+  .work .repo a:hover { color: var(--bone); border-color: var(--oxblood-bright); }
+
+  @media (max-width: 620px) {
+    .work { grid-template-columns: 1fr; }
+    .work-no { font-size: 22px; }
+  }
+
+  /* ————————————— ACT IV · credentials ————————————— */
+  .cred-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  }
+  @media (max-width: 760px) { .cred-grid { grid-template-columns: 1fr; } }
+  .cred-col h3 {
+    font-family: var(--serif-card); text-transform: uppercase; font-weight: 400;
+    font-size: 12px; letter-spacing: 0.36em; color: var(--bone-faint);
+    margin: 0 0 26px; padding-bottom: 14px; border-bottom: 1px solid var(--hairline);
+  }
+  .cred { margin-bottom: 34px; }
+  .cred h4 {
+    font-family: var(--serif-display); font-weight: 400;
+    font-size: 21px; color: var(--bone); margin: 0 0 2px; line-height: 1.25;
+  }
+  .cred .where {
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 10px; letter-spacing: 0.26em; color: var(--bone-faint);
+    margin: 0 0 10px;
+  }
+  .cred p { margin: 0; font-size: 15px; max-width: 52ch; }
+
+  /* particulars strip */
+  .particulars {
+    margin-top: 100px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    border-top: 1px solid var(--hairline);
+  }
+  .part { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--hairline); }
+  .part dt {
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 10px; letter-spacing: 0.3em; color: var(--bone-faint); margin: 0 0 6px;
+  }
+  .part dd { margin: 0; color: var(--bone); font-size: 15.5px; }
+
+  /* ————————————— ACT IV · pursuits ————————————— */
+  .pursuits {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px; background: var(--hairline);
+    border: 1px solid var(--hairline); margin-top: 10px;
+  }
+  .pursuit { background: var(--void); padding: 34px 30px 38px; }
+  .pursuit .mark {
+    color: var(--gilt); font-size: 9px; display: block; margin-bottom: 18px;
+  }
+  .pursuit h3 {
+    font-family: var(--serif-display); font-weight: 400; font-style: italic;
+    font-size: 24px; color: var(--bone); margin: 0 0 10px; line-height: 1.2;
+  }
+  .pursuit p { margin: 0; font-size: 14.5px; max-width: 40ch; }
+
+  /* ————————————— ACT V · contact ————————————— */
+  .act-contact { padding: 170px 0 60px; text-align: center; }
+  .act-contact .sec-label { text-align: center; }
+  .contact-line {
+    font-family: var(--serif-display); font-weight: 400;
+    font-size: clamp(44px, 8.5vw, 96px); line-height: 1.04;
+    color: var(--bone); margin: 0 0 20px; text-wrap: balance;
+  }
+  .contact-sub { max-width: 46ch; margin: 0 auto 52px; color: var(--bone-dim); }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .contact-links a {
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 11px; letter-spacing: 0.3em; text-indent: 0.3em;
+    text-decoration: none; color: var(--bone);
+    border: 1px solid var(--hairline);
+    padding: 17px 34px;
+    transition: border-color 0.4s, background 0.4s, color 0.4s;
+    background: transparent;
+  }
+  .contact-links a:hover { border-color: var(--bone); background: var(--bone); color: var(--void); }
+  .contact-links a.mark { border-color: var(--oxblood); }
+  .contact-links a.mark:hover { background: var(--oxblood); border-color: var(--oxblood); color: var(--bone); }
+
+  footer {
+    max-width: 980px; margin: 90px auto 0; padding: 26px 28px 44px;
+    border-top: 1px solid var(--hairline);
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;
+    font-family: var(--serif-card); text-transform: uppercase;
+    font-size: 9.5px; letter-spacing: 0.3em; color: var(--bone-faint);
+  }
+</style>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ═══════════ ACT I · THE CARD ═══════════ -->
+<header class="act-hero">
+  <svg class="monogram" viewBox="0 0 96 96" aria-hidden="true">
+    <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="48" cy="48" r="40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.6"/>
+    <text x="48" y="58" text-anchor="middle" font-size="26" letter-spacing="3"
+          fill="currentColor" style="font-family: Didot, 'Bodoni 72', 'Playfair Display', serif;">ABB</text>
+  </svg>
+  <p class="hero-over">Karlsruhe &middot; Germany</p>
+
+  <div class="card-stage">
+    <div class="card" id="card" tabindex="0" role="button" aria-pressed="false"
+         aria-label="Business card of Ahmet Barış Baç, Electrical Engineering and Information Technology at KIT. Activate to flip. The back lists the email barisbac20@gmail.com and github.com/barisbac20-blip.">
+      <div class="card-inner">
+        <div class="face front">
+          <div class="card-row"><span>Elektrotechnik</span><span>Informationstechnik</span></div>
+          <div class="card-center">
+            <h1 class="card-name">Ahmet Barış Baç</h1>
+            <div class="card-title">Electrical Engineering &amp; Information Technology &middot; KIT</div>
+          </div>
+          <div class="card-foot">Karlsruhe Institute of Technology</div>
+        </div>
+        <div class="face back">
+          <div class="card-row"><span>Werkstudent — available</span><span>Karlsruhe</span></div>
+          <div class="card-center">
+            <div class="back-line"><small>Correspondence</small>barisbac20@gmail.com</div>
+            <div class="back-line"><small>Works</small>github.com/barisbac20-blip</div>
+          </div>
+          <div class="card-foot">C++ &middot; Python &middot; Automated Testing</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- About -->
-  <section>
-    <h2>About</h2>
-    <div class="about">
-      <p>
-        B.Sc. student in ETIT at KIT, building a career at the intersection of <strong>software engineering, data analysis, and AI</strong>.
-        Currently seeking Werkstudent or HiWi positions (12–16 h/week) in Karlsruhe — software development, IT support, data pipelines, or research assistance.
-      </p>
-    </div>
-  </section>
+  <p class="hero-hint" id="hint" aria-live="polite">Flip the card</p>
+  <div class="scrollcue" aria-hidden="true"></div>
+</header>
 
-  <!-- Tech Stack -->
-  <section>
-    <h2>Tech Stack</h2>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <h3>Languages</h3>
-        <p>C++17/20, Python, SQL (learning)</p>
-      </div>
-      <div class="tech-card">
-        <h3>Build &amp; Test</h3>
-        <p>CMake, Ninja, Catch2, Google Test, GitLab CI</p>
-      </div>
-      <div class="tech-card">
-        <h3>Concepts</h3>
-        <p>OOP, Polymorphism, Algorithms, Debugging, Automated Testing</p>
-      </div>
-      <div class="tech-card">
-        <h3>Tools</h3>
-        <p>Git, GitHub, CLion, VS Code, CI/CD</p>
-      </div>
-      <div class="tech-card">
-        <h3>Data</h3>
-        <p>CSV processing, Sensor analysis, Anomaly detection</p>
-      </div>
-      <div class="tech-card">
-        <h3>Languages (human)</h3>
-        <p>Turkish (native) · German (DSD II) · English (B2)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section>
-    <h2>Featured Projects</h2>
-
-    <a href="https://github.com/barisbac20-blip/wordlomat" target="_blank" style="text-decoration:none;color:inherit;">
-      <div class="project-card">
-        <h3><span class="icon">🟢</span> Wordlomat — C++ Wordle Engine</h3>
-        <p class="desc">Full-featured Wordle implementation with entropy-based AI solver, three difficulty levels, CSV persistence, and comprehensive Catch2 test suite.</p>
-        <div class="tags">
-          <span class="tag">C++17</span><span class="tag">OOP</span><span class="tag">CMake</span><span class="tag">Catch2</span><span class="tag">Algorithms</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://github.com/barisbac20-blip/dna-matching" target="_blank" style="text-decoration:none;color:inherit;">
-      <div class="project-card">
-        <h3><span class="icon">🧬</span> DNA Matching — Gene Sequence Algorithm</h3>
-        <p class="desc">Efficient gene-sequence matcher with configurable mismatch tolerance and early-termination optimization.</p>
-        <div class="tags">
-          <span class="tag">C++20</span><span class="tag">Algorithms</span><span class="tag">String Matching</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://github.com/barisbac20-blip/shapes-polymorphism" target="_blank" style="text-decoration:none;color:inherit;">
-      <div class="project-card">
-        <h3><span class="icon">🔷</span> Shapes — Polymorphic Geometry Engine</h3>
-        <p class="desc">Clean polymorphic shape hierarchy (Circle/Rectangle/Triangle) with ShapeRegistry factory pattern — classical OOP design.</p>
-        <div class="tags">
-          <span class="tag">C++20</span><span class="tag">OOP</span><span class="tag">Polymorphism</span><span class="tag">Design Patterns</span>
-        </div>
-      </div>
-    </a>
-  </section>
-
-  <!-- Currently -->
-  <section>
-    <h2>Currently</h2>
-    <div class="about">
-      <p>
-        📚 Exam season: HM2/3, ITAT, Elektronische Systeme<br>
-        🔍 Open to Werkstudent/HiWi roles starting Sep/Oct 2026<br>
-        🛠 Building: automation tooling, open-source contributions<br>
-        🤝 Ehrenamtlich: IT-Ressort @ Engineers Without Borders Karlsruhe
-      </p>
-    </div>
-  </section>
-
-  <!-- Community -->
-  <section>
-    <h2>Community &amp; Volunteering</h2>
-    <div class="tech-grid">
-      <div class="tech-card">
-        <h3>🤝 EWB Karlsruhe</h3>
-        <p>IT-Ressort (ehrenamtlich) — technical support for a non-profit engineering organization. Documenso digital signature rollout.</p>
-      </div>
-      <div class="tech-card">
-        <h3>🌍 KIT Buddy Programme</h3>
-        <p>Registered international buddy — supporting incoming exchange students at KIT.</p>
-      </div>
-      <div class="tech-card">
-        <h3>🎓 bonding Karlsruhe</h3>
-        <p>Student career initiative — connecting students with industry through firm-contact fairs.</p>
-      </div>
-      <div class="tech-card">
-        <h3>💡 Enactus KIT</h3>
-        <p>Social entrepreneurship team — Innoteam project development.</p>
-      </div>
-      <div class="tech-card">
-        <h3>📚 ROCK YOUR LIFE</h3>
-        <p>Mentoring programme — supporting disadvantaged students through 1:1 coaching.</p>
-      </div>
-      <div class="tech-card">
-        <h3>🏎️ KA-RaceIng</h3>
-        <p>KIT Formula Student team — engineering and motorsport (membership inquiry).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section>
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="mailto:barisbac20@gmail.com">✉️ barisbac20@gmail.com</a>
-      <a href="https://github.com/barisbac20-blip" target="_blank">🐙 GitHub</a>
-      <a href="https://www.linkedin.com/in/barisbac" target="_blank">💼 LinkedIn</a>
-    </div>
-  </section>
-
+<div class="affil" aria-label="Affiliations">
+  <span>Karlsruhe Institute of Technology</span><span class="sep" aria-hidden="true">&#9670;</span>
+  <span>CERN Programme</span><span class="sep" aria-hidden="true">&#9670;</span>
+  <span>Engineers Without Borders</span><span class="sep" aria-hidden="true">&#9670;</span>
+  <span>Cambridge English</span><span class="sep" aria-hidden="true">&#9670;</span>
+  <span>DSD II &middot; KMK</span>
 </div>
 
+<main>
+  <!-- ═══════════ ACT II · PROFILE ═══════════ -->
+  <div class="stage">
+    <section id="profile">
+      <div class="numeral" aria-hidden="true">I</div>
+      <p class="sec-label reveal">The Profile</p>
+      <h2 class="sec-title reveal" style="--d:0.08s">Precision as a habit.</h2>
+      <div class="rule reveal"></div>
+      <div class="prose" style="margin-top: 44px">
+        <p class="reveal">I'm Barış — a student at the <strong>Karlsruhe Institute of Technology</strong>, studying Electrical Engineering and Information Technology. I began in Mechanical Engineering and switched tracks after two semesters, deliberately, because electrical systems, information technology, and programming were where my real interest lived. That decision defines how I work: depth in the things that matter, and no claims I can't back.</p>
+        <p class="reveal" style="--d:0.1s">My instruments are <strong>modern C++ (C++17/20)</strong> and <strong>Python</strong>. KIT project work taught me to treat testing and build tooling as part of the craft: CMake, Catch2, Git-based teamwork, and CI pipelines are part of my normal workflow, not an afterthought. My favorite piece so far is <strong>Wordlomat</strong>, a Wordle engine whose entropy-based solver averages 3.4 guesses; it scored 100% on KIT's automated grader. On the Python side: an AI-assisted anomaly-detection pipeline (FastAPI, pytest, Docker) that I set up, tested, and verified end to end — plus a personal automation stack that runs my study and admin life on macOS.</p>
+        <p class="reveal" style="--d:0.18s">Beyond coursework I do volunteer IT support for <strong>Engineers Without Borders Karlsruhe</strong> — where I rolled out a digital-signature workflow for a distributed volunteer team — and mentor international students through KIT's Buddy Programme. The trajectory points toward data, AI, and quantitative research. I work in German, English, and Turkish.</p>
+      </div>
+      <p class="pull reveal">Every project claim on this page is backed by <em>tests, repositories, or certificates.</em></p>
+    </section>
+
+    <!-- ═══════════ ACT III · WORK ═══════════ -->
+    <section id="work">
+      <div class="numeral" aria-hidden="true">II</div>
+      <p class="sec-label reveal">Selected Work</p>
+      <h2 class="sec-title reveal" style="--d:0.08s">Let's see the work.</h2>
+
+      <div class="work-list">
+        <article class="work reveal">
+          <div class="work-no" aria-hidden="true">01</div>
+          <div>
+            <h3>Wordlomat</h3>
+            <p class="status">Complete &middot; KIT Praktikum Informatik</p>
+            <p class="desc">A full-featured C++17 Wordle engine with an entropy-based AI solver averaging 3.4 guesses across a 2,309-word solution bank. Three difficulty modes — hard mode as constraint satisfaction — persistent statistics, and a comprehensive Catch2 suite under CMake and GitLab CI.</p>
+            <p class="tech">C++17 &middot; CMake &middot; Catch2 &middot; GitLab CI</p>
+            <span class="proof">100% on KIT's automated grader &middot; MIT licensed</span>
+            <p class="repo"><a href="https://github.com/barisbac20-blip/wordlomat">github.com/barisbac20-blip/wordlomat</a></p>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-no" aria-hidden="true">02</div>
+          <div>
+            <h3>Remote Sensor Intelligence</h3>
+            <p class="status">Learning project &middot; actively extended</p>
+            <p class="desc">An anomaly-detection pipeline over synthetic temperature, vibration, and current telemetry using Isolation Forest, with CLI, CSV-export, and FastAPI interfaces. Started AI-assisted; I independently set it up, ran it, reviewed the code, and validated the results: all 8 injected anomalies flagged in a 200-sample demo. A learning project, verified end to end — not a production system.</p>
+            <p class="tech">Python &middot; scikit-learn &middot; FastAPI &middot; pytest &middot; Docker</p>
+            <span class="proof">16 tests passing &middot; ~85% coverage &middot; Ruff-clean</span>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-no" aria-hidden="true">03</div>
+          <div>
+            <h3>DNA Matching</h3>
+            <p class="status">Complete</p>
+            <p class="desc">An efficient gene-sequence matching algorithm in C++20 with configurable mismatch tolerance and early-termination optimization — a compact exercise in performance-conscious, well-tested algorithmic code.</p>
+            <p class="tech">C++20 &middot; CMake &middot; Git</p>
+            <p class="repo"><a href="https://github.com/barisbac20-blip/dna-matching">github.com/barisbac20-blip/dna-matching</a></p>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-no" aria-hidden="true">04</div>
+          <div>
+            <h3>Shapes</h3>
+            <p class="status">Complete</p>
+            <p class="desc">A C++20 polymorphic geometry library built to demonstrate clean object-oriented design — inheritance, virtual dispatch, and the registry/factory pattern.</p>
+            <p class="tech">C++20 &middot; OOP &middot; Git</p>
+            <p class="repo"><a href="https://github.com/barisbac20-blip/shapes-polymorphism">github.com/barisbac20-blip/shapes-polymorphism</a></p>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="work-no" aria-hidden="true">05</div>
+          <div>
+            <h3>The Agent System</h3>
+            <p class="status">Ongoing personal infrastructure</p>
+            <p class="desc">A self-built productivity apparatus: an Obsidian knowledge base under Git versioning, plus a personal AI agent layer on macOS — scheduled automations, daily briefs, CLI mail integration, browser automation. The testbed where I practice keeping real automation running.</p>
+            <p class="tech">Python &middot; macOS / launchd &middot; Git &middot; Obsidian &middot; Playwright</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ ACT IV · CREDENTIALS ═══════════ -->
+    <section id="credentials">
+      <div class="numeral" aria-hidden="true">III</div>
+      <p class="sec-label reveal">Credentials</p>
+      <h2 class="sec-title reveal" style="--d:0.08s">On record.</h2>
+
+      <div class="cred-grid" style="margin-top: 10px">
+        <div class="cred-col reveal">
+          <h3>Education</h3>
+          <div class="cred">
+            <h4>B.Sc. Electrical Engineering &amp; Information Technology</h4>
+            <p class="where">Karlsruhe Institute of Technology &middot; Oct 2025 — present</p>
+            <p>C++ programming, UML, Git, higher mathematics, digital logic design, electronic circuits, physics. Preceded by two semesters of Mechanical Engineering at KIT before changing direction.</p>
+          </div>
+          <div class="cred">
+            <h4>High School Diploma</h4>
+            <p class="where">Özel TAKEV Anadolu Lisesi, Izmir &middot; 2024</p>
+            <p>German-track school; DSD II German language diploma.</p>
+          </div>
+        </div>
+        <div class="cred-col reveal" style="--d:0.12s">
+          <h3>Experience &amp; Involvement</h3>
+          <div class="cred">
+            <h4>Volunteer IT Support</h4>
+            <p class="where">Engineers Without Borders Karlsruhe &middot; Jul 2026 — present</p>
+            <p>Day-to-day IT for a distributed volunteer team — Teams and SharePoint administration; rolled out a Documenso digital-signature workflow for the organization.</p>
+          </div>
+          <div class="cred">
+            <h4>Mentor, International Buddy Programme</h4>
+            <p class="where">KIT</p>
+            <p>Mentoring incoming international students; active in student initiatives including Enactus.</p>
+          </div>
+          <div class="cred">
+            <h4>Early Research Exposure</h4>
+            <p class="where">KIT ITEP &middot; CERN programme &middot; Quantum summer school</p>
+            <p>Technical internship at KIT's Institute for Technical Physics; participant in a CERN programme; quantum-computing summer school (with certificate).</p>
+          </div>
+        </div>
+      </div>
+
+      <dl class="particulars reveal">
+        <div class="part"><dt>Residence</dt><dd>Karlsruhe, Germany</dd></div>
+        <div class="part"><dt>Turkish</dt><dd>Native</dd></div>
+        <div class="part"><dt>German</dt><dd>DSD II — studying in German</dd></div>
+        <div class="part"><dt>English</dt><dd>Cambridge FCE, B2</dd></div>
+      </dl>
+    </section>
+
+    <!-- ═══════════ ACT IV · PURSUITS ═══════════ -->
+    <section id="pursuits">
+      <div class="numeral" aria-hidden="true">IV</div>
+      <p class="sec-label reveal">Pursuits</p>
+      <h2 class="sec-title reveal" style="--d:0.08s">Beyond the syllabus.</h2>
+
+      <div class="pursuits reveal">
+        <div class="pursuit">
+          <span class="mark" aria-hidden="true">&#9670;</span>
+          <h3>Polo</h3>
+          <p>The one pursuit with no keyboard in it — riding, reading the field, and a team that moves at speed.</p>
+        </div>
+        <div class="pursuit">
+          <span class="mark" aria-hidden="true">&#9670;</span>
+          <h3>Languages</h3>
+          <p>Turkish, German, English — three working languages, credentialed and in daily use.</p>
+        </div>
+        <div class="pursuit">
+          <span class="mark" aria-hidden="true">&#9670;</span>
+          <h3>Automation</h3>
+          <p>The hobby that became infrastructure: a personal agent apparatus that runs briefs, mail, and study logistics.</p>
+        </div>
+        <div class="pursuit">
+          <span class="mark" aria-hidden="true">&#9670;</span>
+          <h3>Mentorship</h3>
+          <p>International-student mentoring at KIT; volunteer IT for Engineers Without Borders Karlsruhe.</p>
+        </div>
+        <div class="pursuit">
+          <span class="mark" aria-hidden="true">&#9670;</span>
+          <h3>The Long Game</h3>
+          <p>Markets, data, and quantitative research — a CERN programme and a quantum summer school were the first steps.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════ ACT V · CONTACT ═══════════ -->
+  <section class="act-contact" id="contact">
+    <div class="stage">
+      <p class="sec-label reveal">Correspondence</p>
+      <h2 class="contact-line reveal" style="--d:0.06s">Let's talk.</h2>
+      <p class="contact-sub reveal" style="--d:0.12s">An engineer-in-training with verifiable work. Email reaches me fastest.</p>
+      <div class="contact-links reveal" style="--d:0.18s">
+        <a class="mark" href="mailto:barisbac20@gmail.com">Email</a>
+        <a href="https://github.com/barisbac20-blip">GitHub</a>
+        <a href="https://barisbac20-blip.github.io">Portfolio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer>
-  © 2026 Ahmet Baru0131u015F Baç — Karlsruhe, Germany
+  <span>Ahmet Barış Baç &middot; MMXXVI</span>
+  <span>Built to be checked</span>
 </footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var coarse = window.matchMedia('(pointer: coarse)').matches;
+
+  /* ——— card: tilt (outer) + flip (inner) ——— */
+  /* wrapped so a failure here can never leave the .reveal content hidden */
+  try {
+    var card = document.getElementById('card');
+    var stage = card.parentElement;
+    var hint = document.getElementById('hint');
+    var faces = card.querySelectorAll('.face');
+    var flipped = false;
+
+    /* the cardIn keyframe (fill-mode: both) would override the inline
+       tilt transform forever — release it once the entrance finishes */
+    card.addEventListener('animationend', function () {
+      card.style.animation = 'none';
+    });
+
+    function flip() {
+      flipped = !flipped;
+      card.classList.toggle('flipped', flipped);
+      card.setAttribute('aria-pressed', String(flipped));
+      if (hint) hint.textContent = flipped ? 'And the back' : 'Flip the card';
+    }
+    card.addEventListener('click', flip);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+    });
+
+    if (!reduced && !coarse) {
+      var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+      var loop = function () {
+        cx += (tx - cx) * 0.09;
+        cy += (ty - cy) * 0.09;
+        card.style.transform = 'rotateX(' + cy.toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
+        if (Math.abs(tx - cx) > 0.01 || Math.abs(ty - cy) > 0.01) {
+          raf = requestAnimationFrame(loop);
+        } else { raf = null; }
+      };
+      var kick = function () { if (!raf) raf = requestAnimationFrame(loop); };
+      stage.addEventListener('pointermove', function (e) {
+        var r = stage.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width;
+        var py = (e.clientY - r.top) / r.height;
+        tx = (px - 0.5) * 22;
+        ty = (0.5 - py) * 14;
+        faces.forEach(function (f) {
+          f.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+          f.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+        });
+        kick();
+      });
+      stage.addEventListener('pointerleave', function () { tx = 0; ty = 0; kick(); });
+    }
+  } catch (err) { /* card interactivity is optional; reveals below must still run */ }
+
+  /* ——— scroll reveals ——— */
+  var toReveal = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduced) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    toReveal.forEach(function (el) { io.observe(el); });
+  } else {
+    toReveal.forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+</script>
 
 </body>
 </html>
